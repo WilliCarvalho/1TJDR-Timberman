@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374d449e0d3cc3045831c6962d9469e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enviromentAudios:
+  audioClips:
   - {fileID: 8300000, guid: 0bea9fdb8365acb489528b8ac25abd15, type: 3}
   - {fileID: 8300000, guid: 15c580b342fe9d14f9ac19ddd758db62, type: 3}
   - {fileID: 8300000, guid: 797d883794644304391d48cea70e7864, type: 3}
@@ -184,7 +184,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23952c7edc02cf459a07a6753a07857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxAudios:
+  audioClips:
   - {fileID: 8300000, guid: 132669ff5d399a845a949fa3ad351b9e, type: 3}
   - {fileID: 8300000, guid: 08fb1199d2e87f748b6e04f20f29b273, type: 3}
   - {fileID: 8300000, guid: b8480e6cd85d24f4eaf537b4e70445d3, type: 3}
@@ -719,6 +719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807375943}
+  - component: {fileID: 1807375944}
   m_Layer: 0
   m_Name: ---GameSystem---
   m_TagString: Untagged
@@ -742,6 +743,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1807375944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807375942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786c6aa1fd82ca344b8cb1626c1ab1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSystem: {fileID: 1899621370}
 --- !u!1 &1816131762
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,8 +988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a225090597bdfa3419ecbf329ec62741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enviromentAudio: {fileID: 0}
-  sfxAudio: {fileID: 0}
+  enviromentAudio: {fileID: 225517581}
+  sfxAudio: {fileID: 703846952}
 --- !u!1 &2074654367
 GameObject:
   m_ObjectHideFlags: 0

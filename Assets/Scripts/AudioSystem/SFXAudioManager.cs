@@ -1,46 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum SFXAudioType
 {
     OnClick,
-    Hit,
-    Hurts
+    TimberHit,
+    PlayerHurts
 }
 
 [RequireComponent(typeof(AudioSource))]
-public class SFXAudioManager : MonoBehaviour
+public class SFXAudioManager : AudioABS
 {
-    [SerializeField] private AudioClip[] sfxAudios;
-    private AudioSource audioSource;
-
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    public void ChooseSoundType(SFXAudioType audioType)
+    public void PlaySoundByType(SFXAudioType audioType)
     {
         switch (audioType)
         {
             case SFXAudioType.OnClick:
-                PlaySound(sfxAudios[0]);
+                PlaySound(audioClips[0]);
                 break;
-            case SFXAudioType.Hit:
-                PlaySound(sfxAudios[1]);
+
+            case SFXAudioType.TimberHit:
+                PlaySound(audioClips[1]);
                 break;
-            case SFXAudioType.Hurts:
-                PlaySound(sfxAudios[2]);
-                break;
-            default:
+
+            case SFXAudioType.PlayerHurts:
+                PlaySound(audioClips[2]);
                 break;
         }
-    }
-
-    public void PlaySound(AudioClip audio)
-    {
-        audioSource.clip = audio;
-        audioSource.Play();
     }
 }
