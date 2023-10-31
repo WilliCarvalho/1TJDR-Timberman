@@ -6,6 +6,7 @@ public class GameSystem : MonoBehaviour
     [HideInInspector] public InputManager inputManager;
 
     [SerializeField] private AudioSystem audioSystem;
+    [SerializeField] private TrunksPool trunksPool;
 
     private void Awake()
     {
@@ -25,6 +26,11 @@ public class GameSystem : MonoBehaviour
     private void Start()
     {
         PlayEnviromentAudioByType(EnviromentAudioType.Menu);
+    }
+
+    public void OnTrunkHit()
+    {
+        trunksPool.TrunkHit();
     }
 
     public void PlayEnviromentAudioByType(EnviromentAudioType audioType)
