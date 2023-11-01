@@ -13,12 +13,15 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         GameSystem.instance.inputManager.OnHit += TimberHit;
+        
     }
 
     private void TimberHit()
     {
         //TODO
+        
         animator.SetTrigger("pHit");
+        GameSystem.instance.PlaySFXAudioByType(SFXAudioType.TimberHit);
         Debug.Log("HIT!");
     }
 
