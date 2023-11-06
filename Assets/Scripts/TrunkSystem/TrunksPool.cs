@@ -19,20 +19,19 @@ public class TrunksPool : MonoBehaviour
     
     public void TrunkHit()
     {
-        TrunkBase hittedTrunk = activeTrunks[activeTrunks.Count - 1];
+        TrunkBase hittedTrunk = activeTrunks.FirstOrDefault();
         hittedTrunk.TrunkHitted();
-        ReturnTrunkToPool(hittedTrunk);
         RentTrunk();
+        ReturnTrunkToPool(hittedTrunk);
     }
 
     public void RentTrunk()
     {
         TrunkBase obj;
 
-        if (pooledTrunks.Count <= 1)
+        if (pooledTrunks.Count < 1)
         {
             obj = InstantiateTrunk();
-            pooledTrunks.Remove(pooledTrunks.FirstOrDefault());
         }
         else
         {
@@ -48,7 +47,6 @@ public class TrunksPool : MonoBehaviour
     private TrunkBase InstantiateTrunk()
     {
         GameObject obj = Instantiate(trunkPrefab);
-
         return obj.GetComponent<TrunkBase>();
     }
 
