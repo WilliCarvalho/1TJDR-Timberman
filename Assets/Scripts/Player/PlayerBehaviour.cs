@@ -53,6 +53,14 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.Log("HIT!");
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<TrunkBase>())
+        {
+            GameSystem.instance.GameOver();
+        }
+    }
+
     private void OnDestroy()
     {
         GameSystem.instance.inputManager.OnHit -= HitHandler;

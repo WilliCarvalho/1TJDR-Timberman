@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 1696045849}
+  scoreText: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!114 &1816131764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +739,14 @@ PrefabInstance:
     - target: {fileID: 2163110904622095772, guid: 44dccc80005d2f3498d318b86097ac96, type: 3}
       propertyPath: m_Name
       value: ---GameSystem---
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475255394173217901, guid: 44dccc80005d2f3498d318b86097ac96, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812333921631433212, guid: 44dccc80005d2f3498d318b86097ac96, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

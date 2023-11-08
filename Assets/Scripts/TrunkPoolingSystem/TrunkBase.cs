@@ -10,7 +10,7 @@ public abstract class TrunkBase : MonoBehaviour
     {
         TrunkPool.OnTrunkHitted += TrunkFall;
         int randomNum = Random.Range(0, 2);
-        spriteRenderer.flipX = randomNum == 0;
+        spriteRenderer.flipY = randomNum == 0;
         //Pode substituir a linha de cima
         //if(randomNum == 0)
         //{
